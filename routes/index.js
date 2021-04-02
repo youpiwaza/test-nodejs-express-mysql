@@ -17,12 +17,22 @@ db.connect(function(err) {
     if (err) throw err;
     // Tableau d'objets, contenant les lignes de la bdd
     console.log(result);
+
+    // Faire le rendu dans la page
+
+    /* GET home page. */
+    router.get('/', function(req, res, next) {
+      res.render(
+        'index',
+        {
+          title: 'Affichage de données depuis la BDD',
+          clientsDepuisLeSQL: result
+        }
+      );
+    });
+
   });
 });
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
 module.exports = router;

@@ -2,4 +2,8 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Voici un tableau généré a partir des données de la BDD classicmodels 
+
+  ul
+    each val in clientsDepuisLeSQL
+      li= val.customerName
