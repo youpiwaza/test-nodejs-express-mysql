@@ -15,3 +15,9 @@ npm i
 # Lunch app
 npm start
 ```
+
+Go to [http://localhost:3000/](http://localhost:3000/).
+
+## Tutorial
+
+Here the [tutorial followed](https://practicalprogramming.fr/nodejs-mysql).
