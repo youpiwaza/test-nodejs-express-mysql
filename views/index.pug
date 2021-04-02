@@ -4,6 +4,18 @@ block content
   h1= title
   p Voici un tableau généré a partir des données de la BDD classicmodels 
 
-  ul
-    each val in clientsDepuisLeSQL
-      li= val.customerName
+  //- ul
+  //-   each val in clientsDepuisLeSQL
+  //-     li= val.customerName
+  
+  table
+    thead
+      tr
+        //- J'extrait les clés du premièr client afin de générer mes en-têtes
+        each val, key in clientsDepuisLeSQL[0]
+          th= key
+    tbody
+      each client in clientsDepuisLeSQL
+        tr
+          each valeur in client
+            td= valeur
